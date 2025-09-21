@@ -1,33 +1,41 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Literata, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const literata = Literata({
+  variable: "--font-literata",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Scriptorium AI - Transcripción y análisis de documentos con IA",
-  description: "Plataforma profesional para transcripción de documentos manuscritos, PDFs y archivos de texto. Genera resúmenes automáticos, extrae tags y analiza contenido con inteligencia artificial.",
-  keywords: ["Scriptorium AI", "transcripción", "análisis de documentos", "SaaS", "IA", "documentos manuscritos", "PDF"],
-  authors: [{ name: "Scriptorium AI Team" }],
+  title: "Scriptorium AI - Plataforma Institucional de Digitalización Documental",
+  description: "Solución empresarial para bibliotecas nacionales, archivos históricos y administraciones públicas. Transcripción masiva de documentos manuscritos, análisis de contenido y preservación digital con tecnología de IA avanzada.",
+  keywords: ["Scriptorium AI", "digitalización documental", "bibliotecas nacionales", "archivos históricos", "administración pública", "transcripción masiva", "preservación digital", "IA institucional"],
+  authors: [{ name: "Scriptorium AI - Enterprise Solutions" }],
   openGraph: {
-    title: "Scriptorium AI - Transcripción y análisis de documentos con IA",
-    description: "Plataforma profesional para transcripción de documentos manuscritos, PDFs y archivos de texto con IA",
+    title: "Scriptorium AI - Digitalización Documental Institucional",
+    description: "Plataforma empresarial para la digitalización y análisis de fondos documentales históricos con IA",
     url: "https://scriptoriumia.eu",
-    siteName: "Scriptorium AI",
+    siteName: "Scriptorium AI Enterprise",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scriptorium AI - Transcripción y análisis de documentos con IA",
-    description: "Plataforma profesional para transcripción de documentos manuscritos, PDFs y archivos de texto con IA",
+    title: "Scriptorium AI - Digitalización Documental Institucional",
+    description: "Solución empresarial para bibliotecas, archivos y administraciones públicas",
   },
 };
 
@@ -39,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${literata.variable} ${inter.variable} ${jetbrainsMono.variable} font-serif antialiased`}
       >
         {children}
       </body>
