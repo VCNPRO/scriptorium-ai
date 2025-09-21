@@ -1,304 +1,267 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-100 relative overflow-hidden">
-      {/* Fondo con patrón institucional */}
-      <div className="absolute inset-0 opacity-5">
+    <div className="min-h-screen bg-gray-900 text-gray-100 relative">
+      {/* Fondo sutil */}
+      <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
+          backgroundSize: '20px 20px'
         }}></div>
       </div>
 
-      {/* Header Institucional Sofisticado */}
-      <header className="relative z-50 glass-effect border-b border-slate-700/50 sticky top-0">
-        <div className="container mx-auto px-8 py-6">
+      {/* Header elegante y discreto */}
+      <header className="relative z-50 border-b border-gray-800/50 bg-black/40 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <nav className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">S</span>
-                </div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-lg blur opacity-30"></div>
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-br from-gray-600 to-gray-800 rounded flex items-center justify-center">
+                <span className="text-gray-100 font-medium text-sm">S</span>
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                  Scriptorium AI
-                </h1>
-                <p className="text-sm text-slate-400 font-medium">Enterprise Solutions</p>
+                <h1 className="text-lg font-medium text-gray-100">Scriptorium AI</h1>
+                <p className="text-xs text-gray-400">Enterprise Solutions</p>
               </div>
             </div>
 
-            <div className="hidden lg:flex items-center space-x-8">
-              <a href="#soluciones" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
+            <div className="hidden lg:flex items-center space-x-6">
+              <a href="#soluciones" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
                 Soluciones
               </a>
-              <a href="#instituciones" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
+              <a href="#instituciones" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
                 Instituciones
               </a>
-              <a href="#seguridad" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
+              <a href="#seguridad" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
                 Seguridad
               </a>
-              <a href="#soporte" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
-                Soporte Enterprise
-              </a>
               <button className="institutional-button-primary">
-                Consulta Institucional
+                Consulta
               </button>
             </div>
           </nav>
         </div>
       </header>
 
-      {/* Hero Section Institucional */}
-      <section className="relative py-24 lg:py-32">
-        <div className="container mx-auto px-8">
-          <div className="max-w-6xl mx-auto text-center fade-in">
+      {/* Hero Section refinado */}
+      <section className="relative py-16 lg:py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
 
-            {/* Badge institucional */}
-            <div className="inline-flex items-center glass-effect rounded-full px-6 py-3 mb-8 border border-slate-600/50">
-              <div className="status-indicator status-operational"></div>
-              <span className="text-slate-300 font-medium">
-                Certificado para Administraciones Públicas • ISO 27001 • GDPR Compliant
+            {/* Badge sutil */}
+            <div className="inline-flex items-center bg-gray-800/50 border border-gray-700/50 rounded-full px-4 py-2 mb-8 backdrop-blur-sm">
+              <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+              <span className="text-xs text-gray-300 font-medium">
+                Certificado • ISO 27001 • GDPR Compliant
               </span>
             </div>
 
-            {/* Título principal */}
-            <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
-              <span className="bg-gradient-to-r from-white via-slate-200 to-slate-300 bg-clip-text text-transparent">
-                Digitalización Documental
-              </span>
+            {/* Título principal elegante */}
+            <h1 className="text-3xl lg:text-4xl font-medium mb-6 leading-tight text-gray-100">
+              Digitalización Documental de
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text text-transparent">
-                de Fondos Históricos
-              </span>
+              <span className="text-gray-300">Fondos Históricos</span>
             </h1>
 
-            {/* Subtítulo institucional */}
-            <p className="text-xl lg:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Plataforma empresarial especializada en la transcripción masiva y análisis de documentos manuscritos
-              para <strong className="text-white">bibliotecas nacionales</strong>, <strong className="text-white">archivos históricos</strong> y
-              <strong className="text-white"> administraciones públicas</strong>.
+            {/* Subtítulo refinado */}
+            <p className="text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Plataforma especializada en transcripción y análisis de documentos manuscritos
+              para bibliotecas nacionales, archivos históricos y administraciones públicas.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
-              <button className="institutional-button-primary text-lg">
-                Solicitar Demo Institucional
+            {/* CTA Buttons discretos */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <button className="institutional-button-primary">
+                Solicitar Demo
               </button>
-              <button className="institutional-button-secondary text-lg">
-                Descargar Caso de Estudio
+              <button className="institutional-button-secondary">
+                Caso de Estudio
               </button>
             </div>
 
-            {/* Métricas institucionales */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+            {/* Métricas discretas */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-gray-800/50">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">50M+</div>
-                <div className="text-slate-400">Documentos Procesados</div>
+                <div className="text-2xl font-medium text-gray-200 mb-1">50M+</div>
+                <div className="text-sm text-gray-500">Documentos</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-emerald-400 mb-2">200+</div>
-                <div className="text-slate-400">Instituciones</div>
+                <div className="text-2xl font-medium text-gray-200 mb-1">200+</div>
+                <div className="text-sm text-gray-500">Instituciones</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-amber-400 mb-2">99.9%</div>
-                <div className="text-slate-400">Uptime SLA</div>
+                <div className="text-2xl font-medium text-gray-200 mb-1">99.9%</div>
+                <div className="text-sm text-gray-500">Uptime</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">45</div>
-                <div className="text-slate-400">Países</div>
+                <div className="text-2xl font-medium text-gray-200 mb-1">45</div>
+                <div className="text-sm text-gray-500">Países</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="section-separator"></div>
+      {/* Separador sutil */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent max-w-4xl mx-auto"></div>
 
-      {/* Sección de Soluciones por Tipo de Institución */}
-      <section id="soluciones" className="py-20 relative">
-        <div className="container mx-auto px-8">
-          <div className="text-center mb-16 slide-up">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Soluciones por <span className="text-blue-400">Sector Institucional</span>
+      {/* Sección de Soluciones elegante */}
+      <section id="soluciones" className="py-16 relative">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-gray-100">
+              Soluciones Especializadas
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Tecnología especializada adaptada a las necesidades específicas de cada tipo de institución patrimonial.
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Tecnología adaptada a las necesidades específicas de instituciones patrimoniales.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6">
             {/* Bibliotecas Nacionales */}
-            <div className="institutional-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
+            <div className="institutional-card p-6 rounded-lg">
+              <div className="w-10 h-10 bg-gray-700 rounded flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Bibliotecas Nacionales</h3>
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Digitalización masiva de manuscritos históricos, incunables y fondos patrimoniales.
-                Procesamiento de hasta 10,000 documentos diarios con precisión del 99.7%.
+              <h3 className="text-lg font-medium mb-3 text-gray-100">Bibliotecas Nacionales</h3>
+              <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                Digitalización de manuscritos históricos e incunables.
+                Procesamiento hasta 10,000 documentos diarios.
               </p>
-              <ul className="space-y-3 text-slate-400">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                  Manuscritos medievales y renacentistas
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                  Catalogación automática MARC21
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                  Metadatos Dublin Core
-                </li>
+              <ul className="space-y-2 text-xs text-gray-500">
+                <li>• Manuscritos medievales</li>
+                <li>• Catalogación MARC21</li>
+                <li>• Metadatos Dublin Core</li>
               </ul>
             </div>
 
             {/* Archivos Históricos */}
-            <div className="institutional-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            <div className="institutional-card p-6 rounded-lg">
+              <div className="w-10 h-10 bg-gray-700 rounded flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Archivos Históricos</h3>
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Preservación digital de documentos administrativos, protocolos notariales y expedientes gubernamentales.
-                Análisis de series documentales con IA especializada.
+              <h3 className="text-lg font-medium mb-3 text-gray-100">Archivos Históricos</h3>
+              <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                Preservación de protocolos notariales y expedientes.
+                Análisis de series documentales.
               </p>
-              <ul className="space-y-3 text-slate-400">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
-                  Protocolos notariales s. XVI-XX
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
-                  Expedientes administrativos
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
-                  Análisis diplomático automático
-                </li>
+              <ul className="space-y-2 text-xs text-gray-500">
+                <li>• Protocolos s. XVI-XX</li>
+                <li>• Expedientes administrativos</li>
+                <li>• Análisis diplomático</li>
               </ul>
             </div>
 
             {/* Administraciones Públicas */}
-            <div className="institutional-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            <div className="institutional-card p-6 rounded-lg">
+              <div className="w-10 h-10 bg-gray-700 rounded flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-white">Administraciones Públicas</h3>
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Modernización de archivos gubernamentales y digitalización de expedientes históricos.
-                Cumplimiento estricto de normativas de protección de datos y seguridad.
+              <h3 className="text-lg font-medium mb-3 text-gray-100">Administraciones</h3>
+              <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                Modernización de archivos gubernamentales.
+                Cumplimiento normativo estricto.
               </p>
-              <ul className="space-y-3 text-slate-400">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-amber-400 rounded-full mr-3"></div>
-                  Expedientes gubernamentales
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-amber-400 rounded-full mr-3"></div>
-                  Cumplimiento GDPR/LOPD
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-amber-400 rounded-full mr-3"></div>
-                  Auditoría y trazabilidad completa
-                </li>
+              <ul className="space-y-2 text-xs text-gray-500">
+                <li>• Expedientes gubernamentales</li>
+                <li>• Cumplimiento GDPR</li>
+                <li>• Auditoría completa</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="section-separator"></div>
+      {/* Separador */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent max-w-4xl mx-auto"></div>
 
-      {/* Sección de Capacidades Técnicas Enterprise */}
-      <section id="instituciones" className="py-20">
-        <div className="container mx-auto px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Capacidades <span className="text-emerald-400">Enterprise</span>
+      {/* Capacidades técnicas */}
+      <section id="instituciones" className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-gray-100">
+              Capacidades Técnicas
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Tecnología de vanguardia diseñada para el procesamiento masivo y la preservación digital a largo plazo.
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Tecnología para procesamiento masivo y preservación digital.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mt-1">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <div className="grid lg:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <div className="flex space-x-4">
+                <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center mt-1 flex-shrink-0">
+                  <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Procesamiento a Escala Industrial</h3>
-                  <p className="text-slate-300">
-                    Infraestructura cloud que procesa hasta 50,000 documentos diarios con IA especializada en paleografía y diplomatica.
+                  <h3 className="text-base font-medium text-gray-100 mb-2">Procesamiento Industrial</h3>
+                  <p className="text-sm text-gray-400">
+                    Infraestructura que procesa hasta 50,000 documentos diarios con IA especializada.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-lg flex items-center justify-center mt-1">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              <div className="flex space-x-4">
+                <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center mt-1 flex-shrink-0">
+                  <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">Estándares Internacionales</h3>
-                  <p className="text-slate-300">
-                    Cumplimiento total con OAIS, PREMIS, METS y estándares de preservación digital del sector cultural.
+                  <h3 className="text-base font-medium text-gray-100 mb-2">Estándares</h3>
+                  <p className="text-sm text-gray-400">
+                    Cumplimiento con OAIS, PREMIS, METS y estándares de preservación digital.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg flex items-center justify-center mt-1">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              <div className="flex space-x-4">
+                <div className="w-8 h-8 bg-gray-700 rounded flex items-center justify-center mt-1 flex-shrink-0">
+                  <svg className="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">IA Especializada en Patrimonio</h3>
-                  <p className="text-slate-300">
-                    Modelos entrenados específicamente en documentación histórica iberoamericana de los siglos XVI-XX.
+                  <h3 className="text-base font-medium text-gray-100 mb-2">IA Especializada</h3>
+                  <p className="text-sm text-gray-400">
+                    Modelos entrenados en documentación histórica iberoamericana.
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="institutional-card p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Especificaciones Técnicas</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-2 border-b border-slate-600/30">
-                  <span className="text-slate-300">Velocidad de procesamiento</span>
-                  <span className="text-white font-semibold">50,000 docs/día</span>
+            <div className="institutional-card p-6 rounded-lg">
+              <h3 className="text-lg font-medium text-gray-100 mb-4">Especificaciones</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Procesamiento</span>
+                  <span className="text-gray-200">50,000 docs/día</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-slate-600/30">
-                  <span className="text-slate-300">Precisión OCR manuscritos</span>
-                  <span className="text-white font-semibold">99.7%</span>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Precisión OCR</span>
+                  <span className="text-gray-200">99.7%</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-slate-600/30">
-                  <span className="text-slate-300">Formatos soportados</span>
-                  <span className="text-white font-semibold">PDF, TIFF, JPEG, PNG</span>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Formatos</span>
+                  <span className="text-gray-200">PDF, TIFF, JPEG</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-slate-600/30">
-                  <span className="text-slate-300">Resolución máxima</span>
-                  <span className="text-white font-semibold">600 DPI</span>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Resolución</span>
+                  <span className="text-gray-200">600 DPI</span>
                 </div>
-                <div className="flex justify-between items-center py-2 border-b border-slate-600/30">
-                  <span className="text-slate-300">Idiomas soportados</span>
-                  <span className="text-white font-semibold">Español, Latín, Catalán</span>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">Idiomas</span>
+                  <span className="text-gray-200">ES, LA, CA</span>
                 </div>
-                <div className="flex justify-between items-center py-2">
-                  <span className="text-slate-300">SLA Uptime</span>
-                  <span className="text-white font-semibold">99.9%</span>
+                <div className="flex justify-between text-sm">
+                  <span className="text-gray-400">SLA</span>
+                  <span className="text-gray-200">99.9%</span>
                 </div>
               </div>
             </div>
@@ -306,101 +269,84 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="section-separator"></div>
+      {/* Separador */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent max-w-4xl mx-auto"></div>
 
-      {/* Sección de Seguridad y Compliance */}
-      <section id="seguridad" className="py-20">
-        <div className="container mx-auto px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Seguridad y <span className="text-red-400">Compliance</span>
+      {/* Seguridad */}
+      <section id="seguridad" className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl lg:text-3xl font-medium mb-4 text-gray-100">
+              Seguridad y Compliance
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Máximos estándares de seguridad y cumplimiento normativo para instituciones públicas y patrimoniales.
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Máximos estándares para instituciones públicas y patrimoniales.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Certificaciones */}
-            <div className="institutional-card p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.031 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Certificaciones</h3>
-              <ul className="space-y-3 text-slate-300">
+          <div className="grid lg:grid-cols-3 gap-6">
+            <div className="institutional-card p-6 rounded-lg">
+              <h3 className="text-base font-medium text-gray-100 mb-4">Certificaciones</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   ISO 27001:2013
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   SOC 2 Type II
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   GDPR Compliant
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
-                  ENS (Esquema Nacional de Seguridad)
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+                  ENS
                 </li>
               </ul>
             </div>
 
-            {/* Infraestructura */}
-            <div className="institutional-card p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Infraestructura</h3>
-              <ul className="space-y-3 text-slate-300">
+            <div className="institutional-card p-6 rounded-lg">
+              <h3 className="text-base font-medium text-gray-100 mb-4">Infraestructura</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
-                  Centros de datos UE
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+                  Centros datos UE
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   Cifrado AES-256
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   Backups 3-2-1
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
-                  Red privada virtual
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+                  Red privada
                 </li>
               </ul>
             </div>
 
-            {/* Auditoría */}
-            <div className="institutional-card p-8 rounded-2xl">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-xl flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Auditoría</h3>
-              <ul className="space-y-3 text-slate-300">
+            <div className="institutional-card p-6 rounded-lg">
+              <h3 className="text-base font-medium text-gray-100 mb-4">Auditoría</h3>
+              <ul className="space-y-2 text-sm text-gray-400">
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   Trazabilidad completa
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   Logs inmutables
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   Informes automáticos
                 </li>
                 <li className="flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
-                  Control de acceso RBAC
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+                  Control RBAC
                 </li>
               </ul>
             </div>
@@ -408,60 +354,51 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="section-separator"></div>
+      {/* Separador */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-800 to-transparent max-w-4xl mx-auto"></div>
 
-      {/* Dashboard de Estado del Sistema */}
-      <section className="py-20">
-        <div className="container mx-auto px-8">
-          <div className="institutional-card p-12 rounded-3xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Estado del Sistema en Tiempo Real</h2>
-              <p className="text-slate-300">Monitorización 24/7 de todos los servicios de la plataforma</p>
+      {/* Estado del sistema discreto */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="institutional-card p-8 rounded-lg">
+            <div className="text-center mb-8">
+              <h2 className="text-xl font-medium text-gray-100 mb-2">Estado del Sistema</h2>
+              <p className="text-sm text-gray-400">Monitorización 24/7</p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-bold text-emerald-400 mb-6 flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
+                <h3 className="text-base font-medium text-gray-100 mb-4 flex items-center">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
                   Servicios Operativos
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-2">
                   {[
-                    "Motor de Transcripción IA",
+                    "Motor de Transcripción",
                     "Análisis Paleográfico",
-                    "Generación de Metadatos",
                     "API Enterprise",
-                    "Sistema de Auditoría",
-                    "Backup y Recuperación"
+                    "Sistema de Auditoría"
                   ].map((service, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-slate-800/50">
-                      <span className="text-slate-300">{service}</span>
-                      <div className="flex items-center space-x-2">
-                        <div className="status-indicator status-operational"></div>
-                        <span className="text-emerald-400 font-semibold">Operativo</span>
-                      </div>
+                    <div key={index} className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">{service}</span>
+                      <span className="text-emerald-500 text-xs">Operativo</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-blue-400 mb-6 flex items-center">
-                  <div className="status-indicator status-operational mr-3"></div>
-                  Capacidades Enterprise
-                </h3>
-                <div className="space-y-4">
+                <h3 className="text-base font-medium text-gray-100 mb-4">Métricas Tiempo Real</h3>
+                <div className="space-y-2">
                   {[
-                    { label: "Documentos procesados hoy", value: "12,847" },
-                    { label: "Tiempo medio de procesamiento", value: "2.3 seg" },
+                    { label: "Docs procesados hoy", value: "12,847" },
+                    { label: "Tiempo procesamiento", value: "2.3s" },
                     { label: "Precisión promedio", value: "99.7%" },
-                    { label: "Instituciones activas", value: "203" },
-                    { label: "Almacenamiento utilizado", value: "2.4 TB" },
-                    { label: "Uptime último mes", value: "99.97%" }
+                    { label: "Uptime mes", value: "99.97%" }
                   ].map((metric, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-slate-800/50">
-                      <span className="text-slate-300">{metric.label}</span>
-                      <span className="text-white font-semibold">{metric.value}</span>
+                    <div key={index} className="flex items-center justify-between text-sm">
+                      <span className="text-gray-400">{metric.label}</span>
+                      <span className="text-gray-200">{metric.value}</span>
                     </div>
                   ))}
                 </div>
@@ -471,49 +408,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer Institucional */}
-      <footer className="py-16 border-t border-slate-700/50">
-        <div className="container mx-auto px-8">
-          <div className="grid lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">S</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Scriptorium AI</h3>
-                  <p className="text-slate-400">Enterprise Solutions</p>
-                </div>
+      {/* Footer minimalista */}
+      <footer className="py-12 border-t border-gray-800/50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center space-y-6 lg:space-y-0">
+            <div className="flex items-center space-x-3">
+              <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
+                <span className="text-gray-300 text-xs font-medium">S</span>
               </div>
-              <p className="text-slate-400 mb-6 max-w-md">
-                Líder en digitalización documental para instituciones patrimoniales.
-                Tecnología de IA especializada en preservación digital.
-              </p>
-              <div className="text-slate-500 text-sm">
-                © 2024 Scriptorium AI Enterprise • scriptoriumia.eu
-                <br />
-                Certificado ISO 27001 • GDPR Compliant • ENS
+              <div>
+                <h3 className="text-sm font-medium text-gray-200">Scriptorium AI</h3>
+                <p className="text-xs text-gray-500">Enterprise Solutions</p>
               </div>
             </div>
 
-            <div>
-              <h4 className="text-white font-semibold mb-4">Soluciones</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li>Bibliotecas Nacionales</li>
-                <li>Archivos Históricos</li>
-                <li>Administraciones Públicas</li>
-                <li>Fondos Patrimoniales</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">Soporte Enterprise</h4>
-              <ul className="space-y-2 text-slate-400">
-                <li>Consultoría Técnica</li>
-                <li>Implantación Dedicada</li>
-                <li>Soporte 24/7</li>
-                <li>Formación Especializada</li>
-              </ul>
+            <div className="text-xs text-gray-500">
+              © 2024 Scriptorium AI • scriptoriumia.eu • ISO 27001 • GDPR
             </div>
           </div>
         </div>
