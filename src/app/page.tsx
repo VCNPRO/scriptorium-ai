@@ -69,11 +69,11 @@ export default function Home() {
 
             {/* CTA Buttons discretos */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <button className="institutional-button-primary">
-                Solicitar Demo
-              </button>
+              <a href="/dashboard" className="institutional-button-primary text-center">
+                Acceder al Dashboard
+              </a>
               <button className="institutional-button-secondary">
-                Caso de Estudio
+                Solicitar Demo
               </button>
             </div>
 
