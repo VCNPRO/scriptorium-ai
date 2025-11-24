@@ -38,9 +38,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Convertir archivo a buffer
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
+    // En este punto, se podría subir el buffer a un almacenamiento en la nube.
+    // Por ahora, solo simulamos el registro del documento.
 
     // Generar ID único para el documento
     const documentId = `doc_${Date.now()}_${Math.random().toString(36).substring(2)}`;

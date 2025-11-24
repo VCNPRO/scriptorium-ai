@@ -39,7 +39,7 @@ export default function Dashboard() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [processing, setProcessing] = useState<string | null>(null);
-  const [selectedDoc, setSelectedDoc] = useState<Document | null>(null);
+  const [_selectedDoc, setSelectedDoc] = useState<Document | null>(null);
   const [processingResult, setProcessingResult] = useState<ProcessingResult | null>(null);
 
   // Cargar documentos al inicializar

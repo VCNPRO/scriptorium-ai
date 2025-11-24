@@ -1,7 +1,30 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// Definimos un tipo estricto para los documentos para evitar 'any'
+interface Document {
+  id: string;
+  filename: string;
+  status: 'processed' | 'processing' | 'failed' | string;
+  uploadedAt: string;
+  processedAt: string | null;
+  size: number;
+  type: string;
+  metadata: {
+    documentType: string;
+    historicalPeriod: string;
+    pages: number;
+    confidence: number | null;
+    language: string | null;
+  };
+  billing: {
+    cost: number | null;
+    processingTime: number | null;
+  };
+}
+
 // Base de datos simulada en memoria (en producción sería PostgreSQL/MongoDB)
-let documentsDatabase: any[] = [
+// Usamos 'const' porque la variable no se reasigna, y el tipo 'Document[]'
+const documentsDatabase: Document[] = [
   {
     id: 'doc_1732206123456_abc123',
     filename: 'privilegio_real_madrid_1354.pdf',
