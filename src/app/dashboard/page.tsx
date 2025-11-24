@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import RAGSearch from '@/components/RAGSearch';
 
 interface Document {
   id: string;
@@ -138,6 +139,9 @@ export default function Dashboard() {
             Procesamiento de documentos históricos con IA especializada
           </p>
         </div>
+
+        {/* --- Búsqueda por Lenguaje Natural --- */}
+        <RAGSearch />
 
         {/* Upload Section */}
         <div className="institutional-card p-6 rounded-lg mb-8">
