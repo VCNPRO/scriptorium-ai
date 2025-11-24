@@ -91,8 +91,12 @@ const RAGSearch: React.FC = () => {
       const data = await response.json();
       setAnswer(data.answer);
 
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError('Ocurrió un error desconocido.');
+      }
     } finally {
       setIsLoading(false);
     }

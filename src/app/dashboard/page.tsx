@@ -40,7 +40,6 @@ export default function Dashboard() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploading, setUploading] = useState(false);
   const [processing, setProcessing] = useState<string | null>(null);
-  const [_selectedDoc, setSelectedDoc] = useState<Document | null>(null);
   const [processingResult, setProcessingResult] = useState<ProcessingResult | null>(null);
 
   // Cargar documentos al inicializar
@@ -230,7 +229,7 @@ export default function Dashboard() {
 
                     {doc.status === 'processed' && (
                       <button
-                        onClick={() => setSelectedDoc(doc)}
+                        onClick={() => alert('Próximamente: Visualización detallada del resultado.')}
                         className="institutional-button-secondary"
                       >
                         Ver Resultado

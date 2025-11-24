@@ -78,10 +78,11 @@ Respuesta Concisa:`
 
     return NextResponse.json({ answer: textResponse, source: 'Respuesta basada en documentos de la biblioteca.' });
 
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Error en la ruta /api/ask:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Ocurrió un error desconocido.';
     return NextResponse.json(
-      { error: 'Ocurrió un error al procesar tu solicitud.', details: error.message },
+      { error: 'Ocurrió un error al procesar tu solicitud.', details: errorMessage },
       { status: 500 }
     );
   }
