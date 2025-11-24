@@ -120,10 +120,10 @@ export async function GET(request: NextRequest) {
       failed: documentsDatabase.filter(d => d.status === 'failed').length,
       totalCost: documentsDatabase
         .filter(d => d.billing.cost)
-        .reduce((sum, d) => sum + d.billing.cost, 0),
+        .reduce((sum, d) => sum + (d.billing.cost ?? 0), 0),
       averageConfidence: documentsDatabase
         .filter(d => d.metadata.confidence)
-        .reduce((sum, d, _, arr) => sum + d.metadata.confidence / arr.length, 0)
+        .reduce((sum, d, _, arr) => sum + (d.metadata.confidence ?? 0) / arr.length, 0)
     };
 
     return NextResponse.json({
