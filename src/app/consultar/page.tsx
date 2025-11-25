@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 
 interface Evidence {
   chunk_id: string;
@@ -41,6 +42,7 @@ function ConsultarContent() {
     if (query) {
       performQuery();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query, collection]);
 
   const performQuery = async () => {
@@ -92,12 +94,12 @@ function ConsultarContent() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <a href="/" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
+              <Link href="/" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
                 Inicio
-              </a>
-              <a href="/dashboard" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
+              </Link>
+              <Link href="/dashboard" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
                 Nueva consulta
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
@@ -115,7 +117,7 @@ function ConsultarContent() {
             </div>
             <div className="flex-1">
               <p className="text-sm text-gray-500 mb-1">Su consulta</p>
-              <p className="text-xl text-gray-100 font-medium">"{query}"</p>
+              <p className="text-xl text-gray-100 font-medium">&ldquo;{query}&rdquo;</p>
               {collection !== 'all' && (
                 <p className="text-sm text-gray-400 mt-2">
                   Buscando en: {collection}

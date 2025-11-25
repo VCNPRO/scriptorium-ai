@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 interface Collection {
   id: string;
@@ -135,12 +136,12 @@ export default function Dashboard() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <a href="/" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
+              <Link href="/" className="text-sm text-gray-400 hover:text-gray-200 transition-colors">
                 Inicio
-              </a>
-              <a href="/dashboard" className="text-sm text-gray-200 border-b border-gray-200">
+              </Link>
+              <Link href="/dashboard" className="text-sm text-gray-200 border-b border-gray-200">
                 Consultar
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
@@ -279,7 +280,7 @@ export default function Dashboard() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <p className="text-gray-200 text-sm mb-1">"{rq.query}"</p>
+                      <p className="text-gray-200 text-sm mb-1">&ldquo;{rq.query}&rdquo;</p>
                       <p className="text-xs text-gray-500">
                         {new Date(rq.timestamp).toLocaleString('es-ES')}
                       </p>
