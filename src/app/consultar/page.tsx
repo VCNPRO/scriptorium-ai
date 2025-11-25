@@ -10,7 +10,7 @@ interface Evidence {
   title: string;
   page_number: number;
   chunk_text: string;
-  score: float;
+  score: number;
   ocr_confidence?: number;
   source_url?: string;
 }
